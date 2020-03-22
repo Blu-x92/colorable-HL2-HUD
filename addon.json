@@ -1,0 +1,10 @@
+{
+	"title"		: "Editable(colorable) Default HL2 HUD",
+	"type"		: "effects",
+	"tags"		: [ "fun", "build" ],
+	"ignore"	: [
+		"*.psd",
+		"*.vcproj",
+		"*.svn*"
+	]
+}
