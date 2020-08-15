@@ -113,7 +113,7 @@ local function DrawWeaponHUD()
 	
 	local xVal = 0
 	local yVal = 0
-	for i,_ in pairs( tCache ) do
+	for i, _ in ipairs( tCache ) do
 		local IsSlotSelected = iCurSlot == i
 		
 		local xoffset = XStart + xVal 
@@ -121,7 +121,7 @@ local function DrawWeaponHUD()
 		if not IsSlotSelected then
 			draw.RoundedBox( 8, xoffset, Y * 0.033, sz, sz, Col )
 		else
-			for k,v in pairs( tCache[i] ) do
+			for k, v in ipairs( tCache[i] ) do
 				if IsValid( v ) then
 					local IsSelected = (k == iCurPos)
 					
@@ -399,7 +399,7 @@ local function PrecacheWeps()
 	flNextPrecache = RealTime() + CACHE_TIME
 	iWeaponCount = 0
 
-	for _, pWeapon in pairs(LocalPlayer():GetWeapons()) do
+	for _, pWeapon in ipairs(LocalPlayer():GetWeapons()) do
 		iWeaponCount = iWeaponCount + 1
 
 		local iSlot = pWeapon:GetSlot() + 1
